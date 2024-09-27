@@ -1,19 +1,21 @@
 package src.main.java;
 
-abstract class Money {
+public class Money {
 
     protected int amount;
     protected String currency;
     
-    String currency() {
+    public String currency() {
         return currency;
     }
 
-    int amount() {
+    public int amount() {
         return amount;
     }
 
-    public abstract Money times(int multiplier);
+    public Money times(int multiplier){
+        return new Money(amount * multiplier, currency);
+    }
 
     public Money(int amount, String currency) {
         this.amount = amount;
