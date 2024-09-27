@@ -1,18 +1,18 @@
-// package src.main.java;
+package src.main.java;
 
-// public class Franc extends Money{
-//     private int amount;
+public class Franc extends Money{
+    
+    Franc(int amount, String currency) {
+        super(amount, currency);
+    }
 
-//     public Franc(int amount) {
-//         super(amount);
-//     }
+    @Override
+    public Money times(int multiplier) {
+        return Money.franc(amount * multiplier);
+    }
 
-//     public Franc times(int multiplier){
-//         return new Franc(amount * multiplier);
-//     }
-
-//     public boolean equals(Object object)  {
-//         Franc franc = (Franc) object;
-//         return amount == franc.amount;
-//      }
-// }
+    @Override
+    public String currency() {
+        return "CHF";
+    }
+}
