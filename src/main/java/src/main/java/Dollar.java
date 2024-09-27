@@ -1,16 +1,18 @@
-package src.main.java;
+// package src.main.java;
 
-public class Dollar {
-    private int amount;
-    public Dollar(int amount) {
-        this.amount = amount;
-    }
-    public Dollar times(int multiplier){
-        return new Dollar(amount * multiplier);
-    }
+// public class Dollar extends Money{
+//     private int amount;
 
-    public boolean equals(Object object)  {
-        Dollar dollar = (Dollar) object;
-        return amount == dollar.amount;
-     }
-}
+//     public Dollar(int amount) {
+//         super(amount);
+//     }
+
+//     public Dollar times(int multiplier){
+//         return new Dollar(amount * multiplier);
+//     }
+
+//     public boolean equals(Object object)  {
+//         Dollar dollar = (Dollar) object;
+//         return amount == dollar.amount;
+//      }
+// }

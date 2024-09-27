@@ -4,17 +4,21 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import src.main.java.Franc;
+import org.junit.Test;
+
+import src.main.java.Money;
 
 public class TestFrancMultiplication {
+    @Test
     public void testFrancMultiplication() {
-        Franc five = new Franc(5);
-        assertEquals(new Franc(10), five.times(2));
-        assertEquals(new Franc(15), five.times(3));
+        Money fiveFrancs = Money.franc(5);
+        assertEquals(Money.franc(10), fiveFrancs.times(2));
+        assertEquals(Money.franc(15), fiveFrancs.times(3));
     }
 
-    public void testEquality() {
-        assertTrue(new Franc(5).equals(new Franc(5)));
-        assertFalse(new Franc(5).equals(new Franc(6)));
+    @Test
+    public void testFrancEquality() {
+        assertTrue(Money.franc(5).equals(Money.franc(5)));
+        assertFalse(Money.franc(5).equals(Money.franc(6)));
     }
 }
